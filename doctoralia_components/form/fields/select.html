@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="{{id}}" ng-if="field.label">{{field.label}}</label>
+  <select class="form-control" ng-model="field.value" id="{{id}}" ng-options="field.options.id(item) as field.options.label(item) for item in field.options.data">
+
+  </select>
+</div>

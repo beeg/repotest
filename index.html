@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="DoctoraliaOne">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title ng-bind='$root.PageService.title'></title>
+
+      <!--styles-->
+      <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+
+      <link rel="stylesheet" href="dist/doctoralia.min.css"/>
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body class="{{$root.PageService.class}}">
+
+        <one-menu></one-menu>
+
+        <main ng-view class="container"></main>
+
+        <!-- angularjs -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+
+        <!-- calendar ui dependencies-->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+        <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
+
+        <script src="dist/doctoralia.min.js"></script>
+
+
+    </body>
+</html>

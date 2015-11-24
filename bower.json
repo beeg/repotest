@@ -1,0 +1,19 @@
+{
+  "name": "repotest",
+  "version": "0.0.1",
+  "description": "Doctoralia One Angular Web App",
+  "author": "Doctoralia",
+  "dependencies": {
+    "angular": "1.4.7",
+    "angular-route": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-cookies": "1.4.x",
+    "angular-ui-calendar": "latest",
+    "angular-translate": "latest",
+    "angular-translate-loader-url": "latest",
+    "angular-translate-loader-static-files": "latest"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
+  }
+}

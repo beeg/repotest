@@ -1,0 +1,30 @@
+.dralia-button{
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #3e4247;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+  padding: 9px 16px;
+  border-radius: 4px;
+  background: #8d36a4;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  background-clip: padding-box; //for the hover effect
+  &:hover{
+    border-color: #8d36a4;
+  }
+}
+
+@media (max-width: 640px){
+  .dralia-button{
+    font-size: 18px;
+    padding: 18px 32px;
+  }
+}
