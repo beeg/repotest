@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="DoctoraliaOne">
+<html ng-app="draliaStyleguide">
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title ng-bind='$root.PageService.title'></title>
@@ -7,15 +7,17 @@
       <!--styles-->
       <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
 
+      <link rel="stylesheet" href="dist/doctoralia_styleguide.min.css"/>
       <link rel="stylesheet" href="dist/doctoralia.min.css"/>
 
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body class="{{$root.PageService.class}}">
-
-        <one-menu></one-menu>
+    <body class="{{$root.PageService.class}}" ng-controller="ComponentsCtrl">
+        <nav>
+          <a href ng-repeat="component in components" ng-click="goTo(component.path)">{{component.component}}</a> 
+        </nav>
 
         <main ng-view class="container"></main>
 
@@ -33,8 +35,7 @@
         <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
         <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
 
+        <script src="dist/doctoralia_styleguide.min.js"></script>
         <script src="dist/doctoralia.min.js"></script>
-
-
     </body>
 </html>

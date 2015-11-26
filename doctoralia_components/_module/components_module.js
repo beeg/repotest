@@ -1,11 +1,6 @@
 (function(){
-
   "use strict";
 
   //create module
-  angular.module('draliaComponents', []);
-
-
-
-
+  angular.module('draliaComponents', []);  
 })();

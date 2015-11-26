@@ -8,22 +8,22 @@ module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
           css: {
-            files: ['doctoralia_modules/**/*.scss', 'doctoralia_components/**/*.scss'],
+            files: ['doctoralia_components/**/*.scss', 'doctoralia_styleguide/**/*.scss'],
             tasks: ['clean:css', 'sass', 'cssmin'],
             options: {
               spawn: false
             }
           },
           js: {
-            files: ['doctoralia_modules/**/*.js', 'doctoralia_components/**/*.js'],
+            files: ['doctoralia_components/**/*.js', 'doctoralia_components/**/*.js'],
             tasks: ['clean:js', 'concat:js', 'uglify:js'],
             options: {
               spawn: false
             }
           },
-          specs: {
-            files: ['spec/*.js'],
-            tasks: ['clean:specs', 'concat:specs', 'uglify:specs'],
+          styleguide: {
+            files: ['doctoralia_styleguide/**/*.js', 'doctoralia_styleguide/**/*.js'],
+            tasks: ['clean:styleguide', 'concat:styleguide', 'uglify:styleguide'],
             options: {
               spawn: false
             }
@@ -42,14 +42,19 @@ module.exports = function(grunt) {
 				},
         clean: {
           css: ['dist/*.css', 'dist/*.min.css', 'dist/*.css.map'],
-          js: ['dist/*.js', 'dist/*.min.js', 'dist/*.js.map'],
-          specs: ['spec/specs.js', 'spec/specs.min.js', 'spec/specs.js.map']
+          js: ['dist/doctoralia.js', 'dist/doctoralia.min.js', 'dist/doctoralia.js.map'],
+          styleguide: ['dist/doctoralia_styleguide.js', 'dist/doctoralia_styleguide.min.js', 'dist/doctoralia_styleguide.js.map']
         },
         sass: {
           dist: {
           	files: 	{
-          		'dist/doctoralia.css': 'doctoralia.scss'
+          		'dist/doctoralia.css': 'dist/doctoralia.scss'
           	}
+          },
+          styleguide: {
+            files:  {
+              'dist/doctoralia_styleguide.css': 'dist/doctoralia_styleguide.scss'
+            }
           }
         },
         uglify: {
@@ -61,37 +66,24 @@ module.exports = function(grunt) {
 			        sourceMap: true,
 			        sourceMapName: 'dist/doctoralia.min.js.map'
 			      },
-            files: [{
-                expand: true,
-                cwd: 'dist/',
-                src: '*.js',
-                dest: 'dist/',
-                ext: '.min.js'
-            }]
+            files: {'dist/doctoralia.min.js': ['dist/doctoralia.js']}
           },
-          specs: {
+          styleguide: {
             options: {
               sourceMap: true,
-              sourceMapName: 'spec/specs.js.map'
+              sourceMapName: 'dist/doctoralia_styleguide.min.js.map'
             },
-            files: [{
-                expand: true,
-                cwd: 'spec/',
-                src: 'specs.js',
-                dest: 'spec/',
-                ext: '.min.js'
-            }]
+            files: {'dist/doctoralia_styleguide.min.js': ['dist/doctoralia_styleguide.js']}
           }
-
         },
         concat: {
             js: {
-              src: ['doctoralia_modules/**/*.js', 'doctoralia_components/**/*.js'],
+              src: ['doctoralia_components/**/*.js', 'doctoralia_components/**/*.js'],
               dest: 'dist/doctoralia.js',
             },
-            specs: {
-              src: ['spec/*.js'],
-              dest: 'spec/specs.js',
+            styleguide: {
+              src: ['doctoralia_styleguide/**/*.js', 'doctoralia_styleguide/**/*.js'],
+              dest: 'dist/doctoralia_styleguide.js',
             }
         }
     });

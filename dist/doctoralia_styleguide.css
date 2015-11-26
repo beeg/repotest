@@ -1,0 +1,11 @@
+nav {
+  margin: 30px;
+  text-align: center; }
+  nav a {
+    margin: 0 5px;
+    text-transform: capitalize; }
+
+.container {
+  padding: 0 20px; }
+
+/*# sourceMappingURL=doctoralia_styleguide.css.map */

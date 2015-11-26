@@ -7,6 +7,6 @@
       templateUrl: 'doctoralia_components/button/button.html',
       replace: true,
       controller: function(){}
-    }
+    } 
   });
 })();

@@ -7,7 +7,7 @@
       templateUrl: 'doctoralia_components/form/form.html',
       replace: true,
       link: function(scope, elem, attrs) {
-
+        
         var dralia_field;
         var directive_name;
         var text_directive = ['text', 'password', 'email', 'date']; //all these types load dralia-text-field

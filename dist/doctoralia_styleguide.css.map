@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,GAAM;EACJ,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM;EAClB,KAAI;IACF,MAAM,EAAE,KAAK;IACb,cAAc,EAAE,UAAU;;AAI9B,UAAY;EACV,OAAO,EAAE,MAAM",
+"sources": ["../doctoralia_styleguide/styleguide.scss"],
+"names": [],
+"file": "doctoralia_styleguide.css"
+}
